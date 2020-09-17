@@ -90,8 +90,26 @@
           </a>
         {{- end }}
       </nav>
+
+      <div class="post-git-link">
+        <p class="post-content">
+          <small>
+            Found a typo? Fix it by editing <a href="{{ .Site.Params.gitInfo.gitRepo }}/tree/master/content/{{ .File.Path }}">this page on GitHub</a>.
+          </small>
+        </p>
+        <p class="post-content">
+          <small>
+            Comments? Share this post
+            on <a href="https://news.ycombinator.com/">Hacker News</a>
+            or <a href="https://www.reddit.com/">Reddit</a> and start a
+            discussion there. You can
+            also <a href="mailto:autarch@urth.org">email me directly</a>.
+          </small>
+        </p>
+      </div>
     </footer>
   </article>
+
 
   <!-- Author Info -->
   {{ if and (.Params.author | default .Site.Author.name) (.Params.showAuthorInfo | default .Site.Params.showAuthorInfo) }}
