@@ -91,12 +91,9 @@
         {{- end }}
       </nav>
 
-      <div class="post-git-link">
-        <p class="post-content">
-          <small>
-            Found a typo? Fix it by editing <a href="{{ .Site.Params.gitInfo.gitRepo }}/tree/master/content/{{ .File.Path }}">this page on GitHub</a>.
-          </small>
-        </p>
+     {{ partial "git_edit_link.html" . }}
+
+      <div class="post-comments">
         <p class="post-content">
           <small>
             Comments? Share this post
@@ -107,6 +104,7 @@
           </small>
         </p>
       </div>
+
     </footer>
   </article>
 
