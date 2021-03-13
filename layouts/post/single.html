@@ -94,15 +94,36 @@
      {{ partial "git_edit_link.html" . }}
 
       <div class="post-comments">
-        <p class="post-content">
+        <div class="post-content">
           <small>
-            Comments? Share this post
-            on <a href="https://news.ycombinator.com/">Hacker News</a>
-            or <a href="https://www.reddit.com/">Reddit</a> and start a
-            discussion there. You can
-            also <a href="mailto:autarch@urth.org">email me directly</a>.
+            Comments?
+
+            {{ if .Params.discuss -}}
+            <p>
+            Discuss this post on:
+            </p>
+            <ul>
+              {{ range .Params.discuss -}}
+              <li>
+                <a href="{{ .uri }}">{{ .site }}</a>
+              </li>
+              {{ end -}}
+            </ul>
+            {{ else }}
+            <p>
+              Share this post
+              on <a href="https://news.ycombinator.com/">Hacker News</a>
+              or <a href="https://www.reddit.com/">Reddit</a> and start a
+              discussion there.
+            </p>
+            {{ end -}}
+
+            <p>
+              You can
+              also <a href="mailto:autarch@urth.org">email me directly</a>.
+            </p>
           </small>
-        </p>
+        </div>
       </div>
 
     </footer>
