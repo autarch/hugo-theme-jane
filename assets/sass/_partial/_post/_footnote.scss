@@ -9,6 +9,8 @@
 }
 
 .footnote-ref {
+  // We don't want the footnote link to have a border.
+  border-bottom: 0px !important;
   display: inline;
   position: relative;
   margin-left: 3px;

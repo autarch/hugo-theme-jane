@@ -30,9 +30,10 @@
 
   a {
     color: $theme-color;
+    border-bottom: $content-link-border;
 
     &:hover {
-      border-bottom: $content-link-border;
+      border-bottom: $content-link-hover-border;
     }
   }
 

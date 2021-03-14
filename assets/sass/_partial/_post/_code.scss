@@ -15,6 +15,13 @@ code, pre {
   font-family: $code-font-family;
 }
 
+a code {
+  border-bottom: $content-link-border;  
+
+  &:hover {
+    border-bottom: $content-link-hover-border;
+  }
+}
 
 // chroma code block style
 .highlight > .chroma {
